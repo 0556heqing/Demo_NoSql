@@ -2,6 +2,8 @@ package com.heqing.demo.noSql.redis;
 
 import com.heqing.demo.noSql.redis.service.*;
 import com.heqing.demo.noSql.redis.service.impl.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.ShardedJedisPool;
 
@@ -9,6 +11,8 @@ import redis.clients.jedis.ShardedJedisPool;
  * Created by heqing on 2017/9/6.
  */
 public class RedisUtil {
+
+    private static final Logger logger = LoggerFactory.getLogger(RedisUtil.class);
 
     private static IJedisKeyOperations jedisKeyOperations;
     private static IJedisStringOperations jedisStringOperations;

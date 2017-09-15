@@ -1,5 +1,7 @@
 package com.heqing.demo.noSql.redis;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.ResourceBundle;

@@ -1,6 +1,8 @@
 package com.heqing.demo.noSql.redis.service.impl;
 
 import com.heqing.demo.noSql.redis.service.IJedisSetOperations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
 
 import java.util.List;
@@ -10,6 +12,8 @@ import java.util.Set;
  * Created by heqing on 2017/9/8.
  */
 public class JedisSetOperations extends JedisKeyOperations implements IJedisSetOperations {
+
+    private static final Logger logger = LoggerFactory.getLogger(JedisSetOperations.class);
 
     public Long add(String key, String... members) {
         Jedis jedis = null;

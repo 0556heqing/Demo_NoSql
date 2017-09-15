@@ -1,6 +1,8 @@
 package com.heqing.demo.noSql.redis.service.impl;
 
 import com.heqing.demo.noSql.redis.service.IJedisSortedSetOperations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
 
 import java.util.Map;
@@ -10,6 +12,8 @@ import java.util.Set;
  * Created by heqing on 2017/9/8.
  */
 public class JedisSortedSetOperations extends JedisKeyOperations implements IJedisSortedSetOperations {
+
+    private static final Logger logger = LoggerFactory.getLogger(JedisSortedSetOperations.class);
 
     public Long add(String key, Map<String, Double> scoreMembers) {
         Jedis jedis = null;

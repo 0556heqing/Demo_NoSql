@@ -1,6 +1,8 @@
 package com.heqing.demo.noSql.redis.service.impl;
 
 import com.heqing.demo.noSql.redis.service.IJedisListOperations;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import redis.clients.jedis.BinaryClient;
 import redis.clients.jedis.Jedis;
 
@@ -10,6 +12,8 @@ import java.util.List;
  * Created by heqing on 2017/9/8.
  */
 public class JedisListOperations extends JedisKeyOperations implements IJedisListOperations {
+
+    private static final Logger logger = LoggerFactory.getLogger(JedisListOperations.class);
 
     public List<String> removeAndGetFirstIndex(int timeout, String key) {
         Jedis jedis = null;

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ShardedJedisManager extends  BaseManager {
 
-    private static final Logger logger = LoggerFactory.getLogger(RedisManager.class);
+    private static final Logger logger = LoggerFactory.getLogger(ShardedJedisManager.class);
 
     private static ShardedJedisPool shardedJedisPool = null;
 
